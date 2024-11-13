@@ -21,4 +21,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./html5up-dimension  # Specify the folder containing index.html
+          publish_dir: ./html5up-dimension
+          target_branch: gh-pages  # Ensure you're deploying to the correct branch
