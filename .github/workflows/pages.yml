@@ -3,26 +3,17 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+      - main  # Use 'master' if that's the branch you're working with
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository content
         uses: actions/checkout@v3
 
-      - name: Deploy to GitHub Pages
-        uses: actions/configure-pages@v2
-
-      - name: Upload to GitHub Pages
-        uses: actions/upload-pages-artifact@v2
-
-      - name: Deploy
-        id: deploy
-        uses: actions/deploy-pages@v2
+      - name: Build and Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./html5up-dimension  # Specify the folder containing index.html
