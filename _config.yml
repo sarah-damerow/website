@@ -1,0 +1,7 @@
+title: My Awesome Site
+description: A description of my awesome site.
+baseurl: ""
+url: "https://sarah-damerow.github.io/website/"
+theme: jekyll-theme-primer
+markdown: kramdown
+paginate: 5
