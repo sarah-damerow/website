@@ -19,8 +19,9 @@ jobs:
 
       - name: Ensure gh-pages branch exists
         run: |
-          git fetch origin gh-pages || git checkout --orphan gh-pages  # If no gh-pages branch, create it
-          git reset --hard  # Ensure no conflicts or changes in the branch
+          git fetch origin gh-pages || git checkout --orphan gh-pages  # Ensure branch exists or create it
+          git reset --hard  # Remove any previous history
+          git clean -fdx  # Remove untracked files/directories
 
       - name: Build and Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
