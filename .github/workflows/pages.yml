@@ -22,4 +22,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./html5up-dimension
-          target_branch: gh-pages  # Ensure you're deploying to the correct branch
+          publish_branch: gh-pages  # Use 'publish_branch' to specify the deployment branch
+        env:
+          NODE_VERSION: '20'  # Force Node 20 if needed
