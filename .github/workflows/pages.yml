@@ -17,11 +17,16 @@ jobs:
       - name: Checkout repository content
         uses: actions/checkout@v3
 
+      - name: Create gh-pages branch if it doesn't exist
+        run: |
+          git fetch origin gh-pages || git checkout --orphan gh-pages
+          git reset --hard  # Clear any changes in gh-pages branch
+          
       - name: Build and Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./html5up-dimension
-          publish_branch: gh-pages  # Use 'publish_branch' to specify the deployment branch
+          publish_branch: gh-pages
         env:
-          NODE_VERSION: '20'  # Force Node 20 if needed
+          NODE_VERSION: '20'  # Force Node.js 20 for compatibility
