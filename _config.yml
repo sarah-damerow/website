@@ -6,3 +6,6 @@ theme: jekyll-theme-primer
 markdown: kramdown
 paginate: 5
 source: .
+sass:
+  style: "assets/css/main.css"  # Override with your CSS file
+
