@@ -1660,20 +1660,19 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* container */
 .responsive-two-column-grid {
-	display:block;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns, with dates narrower */
+    gap: 1em; /* Adds spacing between items */
+    align-items: start; /* Aligns content to the top of each row */
 }
 
-/* columns */
-.responsive-two-column-grid > * {
-	padding:1rem;
+.responsive-two-column-grid div {
+    padding: 0.5em 0; /* Adds padding for a cleaner look */
 }
 
-/* tablet breakpoint */
-@media (min-width:768px) {
-	.responsive-two-column-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
+@media (max-width: 768px) {
+    .responsive-two-column-grid {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
 }
