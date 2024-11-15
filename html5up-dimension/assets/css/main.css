@@ -1676,3 +1676,10 @@ input, select, textarea {
         grid-template-columns: 1fr; /* Stack columns on smaller screens */
     }
 }
+
+.spaced-line {
+    border: none; /* Remove default border style */
+    border-top: 2px solid #ccc; /* Add a custom horizontal line */
+    margin: 20px 0; /* Add space above and below the line */
+}
+
