@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://sarah-damerow.github.io/website/html5up-dimension/sitemap.xml
+Sitemap: https://sarah-damerow.github.io/website/sitemap.xml
 
