@@ -1671,6 +1671,24 @@ input, select, textarea {
     padding: 0.5em 0; /* Adds padding for a cleaner look */
 }
 
+.event {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.event div {
+    margin: 5px 0;
+}
+
+.event b {
+    font-weight: bold;
+}
+
+.event i {
+    font-style: italic;
+}
+
 @media (max-width: 768px) {
     .responsive-two-column-grid {
         grid-template-columns: 1fr; /* Stack columns on smaller screens */
